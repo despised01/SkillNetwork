@@ -1,0 +1,18 @@
+﻿@page
+@using SkillNetwork.ViewModels.Account;
+@model SkillNetwork.ViewModels.Account.RegisterViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="side">
+        Описание социальной сети
+    </div>
+
+    <div class="main">
+        <partial name="Register" model="@Model"/>
+        Блок авторизации
+    </div>
+
+</div>
