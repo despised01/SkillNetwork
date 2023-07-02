@@ -1,18 +1,23 @@
-﻿@page
-@using SkillNetwork.ViewModels.Account;
-@model SkillNetwork.ViewModels.Account.RegisterViewModel
+﻿﻿@using Microsoft.AspNetCore.Identity;
+@using SkillNetwork.Models.Users;
+
 @{
     ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="row">
     <div class="side">
-        Описание социальной сети
+        <div class="center">
+            Пользуйтесь нашей самой крутой соцсетью! Регистрируйтесь всего за 2 минуты, делитесь мыслями, находите новых друзей.
+        </div>
+        <img class="main-img" src="https://pngimg.com/uploads/owl/owl_PNG43.png" />
     </div>
 
+
     <div class="main">
-        <partial name="Register" model="@Model"/>
-        Блок авторизации
+        <partial name="Login" model="Model.LoginView" />
+        <partial name="Register" model="Model.RegisterView" />
     </div>
 
 </div>
